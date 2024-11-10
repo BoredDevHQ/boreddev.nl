@@ -1,7 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    height: 150vh; 
+    min-height: 100vh;
+    display: flex;
     background-color: #d3d3d3; 
     transition: background-color 0.5s;
     --mouse-x: 0;
