@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -59,7 +58,7 @@ body {
     align-items: center;
     gap: 10px;
     z-index: 10;
-    background: rgba(148, 148, 148, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -97,7 +96,7 @@ body {
     width: 14px;
     left: 3px;
     bottom: 3px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     transition: .4s;
     border-radius: 50%;
 }
@@ -112,7 +111,7 @@ input:checked + .slider:before {
 
 body.dark-mode {
     background-color: #121212; 
-    color: #ffffff; 
+    color: #f0f0f0; 
 }
 
 body.dark-mode .box {
@@ -139,9 +138,10 @@ body.dark-mode::before {
     left: var(--mouse-x);
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.432), transparent 60%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 60%);
     pointer-events: none;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 9;
 }
+
