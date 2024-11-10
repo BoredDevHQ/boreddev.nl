@@ -144,26 +144,5 @@ body.dark-mode::before {
     border-radius: 50%;
     z-index: 9;
 }
-@media (max-width: 600px) {
-    .box {
-        width: 95%; 
-        font-size: 18px; 
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
 
-@media (max-width: 768px) {
-    .box {
-        width: 90%; 
-        font-size: 18px; 
-    }
-}
-
-@media (min-width: 1200px) {
-    .box {
-        width: 70%; 
-        font-size: 22px; 
-    }
-}
 
