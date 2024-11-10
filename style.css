@@ -144,29 +144,26 @@ body.dark-mode::before {
     border-radius: 50%;
     z-index: 9;
 }
-/* For small screens (like mobile phones) */
 @media (max-width: 600px) {
     .box {
-        width: 95%; /* Make the box take up most of the screen width on small devices */
-        font-size: 18px; /* Reduce font size */
+        width: 95%; 
+        font-size: 18px; 
         padding-left: 15px;
         padding-right: 15px;
     }
 }
 
-/* For medium screens (like tablets) */
 @media (max-width: 768px) {
     .box {
-        width: 90%; /* Adjust box width for tablets */
-        font-size: 18px; /* Adjust font size for smaller screens */
+        width: 90%; 
+        font-size: 18px; 
     }
 }
 
-/* For large screens */
 @media (min-width: 1200px) {
     .box {
-        width: 70%; /* Make boxes smaller on very large screens */
-        font-size: 22px; /* Increase font size */
+        width: 70%; 
+        font-size: 22px; 
     }
 }
 
