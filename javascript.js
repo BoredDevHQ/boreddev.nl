@@ -92,7 +92,6 @@ class WindowManager {
             `,
             contact: `
                 <h2>Contact Me</h2>
-                <p>📧 Email: cspithout@gmail.com</p>
                 <p>🐱 GitHub: github.com/christiaansp</p>
                 <p>💬 Discord: discord.com/users/738324643324100629</p>
             `,
