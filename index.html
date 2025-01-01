@@ -7,79 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="theme-toggle" class="toggle-container">
-        <span id="toggle-label">Light</span>
-        <label class="switch">
-            <input type="checkbox" id="toggle-switch">
-            <span class="slider"></span>
-        </label>
+    <div class="desktop">
     </div>
-    <div class="container">
-        <div class="box">
 
-            <strong>About Me</strong>
-            <span>Hi there! I'm Chris, a mostly beginner dev from the Netherlands. I have started getting into things like webdev and even some osdev by making my own kernel. I know a pretty decent bit of: HTML, CSS, Python, C and some light assembly. I'm still a student in high school but i am looking to study Computer Science at a Dutch University.</span>            
-        </div>
-        <div class="box">
-            <strong>Projects</strong>
-            <span>In about a year i have made a few projects in OSDev, WebDev and unrelated projects:</span>
-            <li>Own Kernel</li>
-            <li>Weather App (javascript)</li>
-            <li>Weather app for linux (C) </li>
-            <li>"Weather art" in Python (an art project for school)</li>
-            <li>Discord bot (Python)</li>
-            <li>Snake (Python)</li>
-            <li>Space Invaders (Python)</li>
-            <li>local IP address scanner</li>
-            <span>And way more to come if not already listed here.</span>
-        </div>
-        <div class="box">
-            <strong>Contact Me</strong>
-            <span>I respond the fastest in my <a href="https://discord.com/users/738324643324100629">Discord DMS</a>. So please contact me there.</span>
+    <div class="dock">
+        <div class="dock-container">
+            <div class="dock-item" data-window="about">
+                <img src="519b346b7db0afcb4f9cb52896b80d52_Home.png" alt="About">
+                <span class="tooltip">About</span>
+            </div>
+            <div class="dock-item" data-window="projects">
+                <img src="2580bf3fd5dd575f6f9001e05d33578e_xC82S7tzkT.png" alt="Projects">
+                <span class="tooltip">Projects</span>
+            </div>
+            <div class="dock-item" data-window="skills">
+                <img src="dbbbf15d3582b5e8007f552107102377_Figma.png" alt="Skills">
+                <span class="tooltip">Skills</span>
+            </div>
+            <div class="dock-item" data-window="contact">
+                <img src="97bc2c4c3e66591d8440cc6bffdc6dff_Contacts.png" alt="Contact">
+                <span class="tooltip">Contact</span>
+            </div>
+            <div class="dock-item" data-window="settings">
+                <img src="2789209b84ed32802c42bb6172d5fb78_Settings.png" alt="Settings">
+                <span class="tooltip">Settings</span>
+            </div>
         </div>
     </div>
 
-    <script>
-        // Toggle dark mode
-        const toggleSwitch = document.getElementById('toggle-switch');
-        const toggleLabel = document.getElementById('toggle-label');
-        const body = document.body;
-
-        toggleSwitch.addEventListener('change', () => {
-            if (toggleSwitch.checked) {
-                body.classList.add('dark-mode');
-                toggleLabel.textContent = 'Dark';
-            } else {
-                body.classList.remove('dark-mode');
-                toggleLabel.textContent = 'Light';
-            }
-        });
-
-        document.addEventListener('mousemove', (e) => {
-            if (toggleSwitch.checked) {
-                const mouseX = e.clientX;
-                const mouseY = e.clientY + window.scrollY; 
-
-                body.style.setProperty('--mouse-x', `${mouseX}px`);
-                body.style.setProperty('--mouse-y', `${mouseY}px`);
-            }
-        });
-
-        const boxes = document.querySelectorAll('.box');
-        const handleScroll = () => {
-            const triggerBottom = window.innerHeight / 5 * 4; 
-            boxes.forEach(box => {
-                const boxTop = box.getBoundingClientRect().top;
-                if (boxTop < triggerBottom) {
-                    box.classList.add('show');
-                } else {
-                    box.classList.remove('show');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
-    </script>
+    <script src="javascript.js"></script>
 </body>
 </html>
