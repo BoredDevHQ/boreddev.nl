@@ -92,7 +92,7 @@ class WindowManager {
             `,
             contact: `
                 <h2>Contact Me</h2>
-                <p>🐱 GitHub: github.com/christiaansp</p>
+                <p>🐱 GitHub: github.com/boreddevhq</p>
                 <p>💬 Discord: discord.com/users/738324643324100629</p>
             `,
             settings: `
