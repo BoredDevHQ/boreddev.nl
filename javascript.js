@@ -71,22 +71,23 @@ class WindowManager {
             projects: `
                 <h2>My Projects</h2>
                 <ul>
-                    <li>Modern Portfolio Website - MacOS inspired.</li>
-                    <li>Weather app in C with gtk3 for UI.</li>
                     <li>Python Discord bot.</li>
-                    <li>Own kernel in C and Assembly.</li>
+                    <li>kernel (from scratch) in C and Assembly.</li>
                     <li>Multiple games in Swift for MacOS. </li>
-                    <li>Custom home page for firefox in html and css. </li>
                     <li>A python script which turns weather into art. </li>
-                    <li>And more soon to come, as i'm currently getting myself into a lot of front-end development.</li>
+                    <li>ChrisNotes, a MacOS exclusive notes app written in Swift.</li>
+                    <li>A Retro computer store made in PHP, HTML, CSS and JS utilizing a SQL database.</li>
+                    
 
                 </ul>
             `,
             skills: `
                 <h2>Skills</h2>
                 <ul>
-                    <li>Frontend: HTML5, CSS3, JavaScript, Svelte</li>
-                    <li>Backend: N JavaScript, Python, C</li>
+                    <li>Frontend: HTML5, CSS3, JavaScript, SwfitUI</li>
+                    <li>Frameworks: Svelte </li>
+                    <li>Backend: JavaScript, PHP</li>
+                    <li>GPL: Assembly, Python, C, Java</li>
                     <li>Tools: Git, Docker, Figma, Grafana</li>
                 </ul>
             `,
