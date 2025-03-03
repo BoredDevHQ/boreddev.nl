@@ -1,6 +1,6 @@
 :root {
   --background: #1a1a1a;
-  --card-bg: #2a2a2a;
+  --card-bg: rgb(41, 41, 41);
   --text-primary: #f5f5f7;
   --text-secondary: #a1a1a6;
   --accent: #0071e3;
@@ -12,6 +12,10 @@
   --card-radius: 12px;
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -35,7 +39,7 @@ body {
 }
 
 header {
-  padding: 24px 0;
+  padding: 10px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -353,7 +357,8 @@ footer {
     right: -280px;
     width: 280px;
     height: 100vh;
-    background-color: var(--card-bg);
+    background-color: rgb(41, 41, 41, 0.5);
+    backdrop-filter: blur(5px);
     z-index: 900;
     transition: var(--transition);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
@@ -440,4 +445,20 @@ body.no-scroll {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: opacity 0.4s;
+}
+
+.scroll-arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
