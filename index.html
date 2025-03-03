@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +44,12 @@
             <p>High school student crafting clean code and beautiful interfaces. Specializing in modern web technologies and Swift development.</p>
             <a href="#projects" class="btn">View Projects</a>
         </div>
+
     </section>
-    
+      <div class="scroll-arrow" id="scrollArrow">
+    &#x2193;
+  </div>
+</div>
     <section id="skills">
         <div class="container">
             <h2 class="section-title">Skills</h2>
@@ -66,7 +69,6 @@
                     <div class="skill-list">
                         <span class="skill-tag">Svelte</span>
                         <span class="skill-tag">React</span>
-                        <span class="skill-tag">Jekyll</span>
                     </div>
                 </div>
                 
@@ -297,5 +299,94 @@
             body.classList.remove('no-scroll');
         });
     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js"></script>
+    <script type="text/javascript">
+      (async () => {
+        await tsParticles.load({
+          id: "tsparticles",
+          options: {
+            background: {
+              color: "#000", // this sets a background color for the canvas
+            },
+            fpsLimit: 30,
+            fullScreen: {
+              enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
+              zIndex: -10, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
+            },
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: true, // enables the click event
+                  mode: "push", // adds the particles on click
+                },
+                onHover: {
+                  enable: true, // enables the hover event
+                  mode: "repulse", // make the particles run away from the cursor
+                },
+              },
+              modes: {
+                push: {
+                  quantity: 4, // number of particles to add on click
+                },
+                repulse: {
+                  distance: 50, // distance of the particles from the cursor
+                },
+              },
+            },
+            particles: {
+              links: {
+                distance: 150,
+                enable: true,
+                opacity: 0.5,
+              },
+              move: {
+                enable: true,
+                random: true,
+                speed: { min: 1, max: 3 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
+              },
+
+              number: {
+                density: {
+                  enable: true,
+                },
+                value: 70,
+              },
+              opacity: {
+                value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 1, max: 1 }, // let's randomize the particles size a bit
+              },
+            },
+            detectRetina: true,
+          },
+        });
+      })();
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollArrow = document.getElementById('scrollArrow');
+      const skillsSection = document.getElementById('skills');
+  
+      scrollArrow.addEventListener('click', function() {
+        skillsSection.scrollIntoView({ behavior: 'smooth' });
+      });
+  
+      window.addEventListener('scroll', function() {
+        const skillsSectionTop = skillsSection.getBoundingClientRect().top;
+        if (skillsSectionTop <= window.innerHeight / 2) {
+          scrollArrow.classList.add('hidden');
+        } else {
+          scrollArrow.classList.remove('hidden');
+        }
+      });
+    });
+  </script>
+    
 </body>
 </html>
