@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dash.fm-improved - A Last.fm Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <header>
+        <div class="container header-content">
+            <a href="../index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo">BoredDevHQ</div>
+            </a>
+            <nav class="desktop-nav">
+                <a href="../index.html" class="back-link">← Back to Portfolio</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="project-overview">
+            <div class="description">
+                <h2>About dash.fm-improved</h2>
+                <p>A fork of dash.fm with drastically improved UI and additional widgets. This dashboard displays album art and information about currently playing tracks from Last.fm, integrating data from Wikipedia, Musicbrainz, and Deezer APIs.</p>
+            </div>
+
+            <div class="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Clean User Interface</li>
+                    <li>Real-time track information</li>
+                    <li>Stats widget</li>
+                    <li>Easy setup page.</li>
+                    <li>Open source and free to use.</li>
+                </ul>
+            </div>
+
+            <div class="video-section">
+                <h2>Introducing: dash.fm</h2>
+                <div class="video-container">
+
+                    <iframe 
+                        src="https://www.youtube.com/embed/piUE9kzSCdo" 
+                        title="dash.fm-improved Demo"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="setup">
+                <h2>Setup Instructions</h2>
+                <div class="setup-instructions">
+                    <h3>Requirements</h3>
+                    <p>You need to have PHP installed on your system. Here are the setup instructions for different operating systems:</p>
+                    
+                    <h4>macOS</h4>
+                    <code>php -S localhost:8000</code>
+
+                    <h4>Windows</h4>
+                    <p>Using XAMPP:</p>
+                    <ol>
+                        <li>Download XAMPP from <a href="https://www.apachefriends.org" target="_blank">apachefriends.org</a></li>
+                        <li>Install XAMPP</li>
+                        <li>Start Apache from the XAMPP Control Panel</li>
+                    </ol>
+                    <p>Or using WSL:</p>
+                    <code>sudo apt update && sudo apt install php
+php -S localhost:8000</code>
+
+                    <h4>Linux</h4>
+                    <code># Ubuntu/Debian
+sudo apt update && sudo apt install php
+php -S localhost:8000</code>
+
+                    <h4>BSD</h4>
+                    <p>FreeBSD:</p>
+                    <code>pkg install php
+php -S localhost:8000</code>
+
+                    <p>OpenBSD:</p>
+                    <code>pkg_add php
+php -S localhost:8000</code>
+
+                    <p>NetBSD:</p>
+                    <code>pkgin install php
+php -S localhost:8000</code>
+                </div>
+            </div>
+
+            <div class="screenshots">
+                <h2>Screenshots</h2>
+                <div class="screenshot-grid">
+                    <figure>
+                        <img src="https://raw.githubusercontent.com/boreddevhq/dash.fm-improved/main/screens/no_detail_view.png" alt="Album View">
+                        <figcaption>Simple Album View</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://raw.githubusercontent.com/boreddevhq/dash.fm-improved/main/screens/full_bio.png" alt="Full Artist Bio">
+                        <figcaption>Full Artist Biography</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://raw.githubusercontent.com/boreddevhq/dash.fm-improved/main/screens/reallife.jpg" alt="Real Use Case">
+                        <figcaption>Real-world Usage Example</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>View this project on <a href="https://github.com/boreddevhq/dash.fm-improved" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js"></script>
+    <script type="text/javascript">
+      (async () => {
+        await tsParticles.load({
+          id: "tsparticles",
+          options: {
+            background: {
+              color: "#000",
+            },
+            fpsLimit: 30,
+            fullScreen: {
+              enable: true,
+              zIndex: -10,
+            },
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: true,
+                  mode: "push",
+                },
+                onHover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+              },
+              modes: {
+                push: {
+                  quantity: 4,
+                },
+                repulse: {
+                  distance: 50,
+                },
+              },
+            },
+            particles: {
+              links: {
+                distance: 150,
+                enable: true,
+                opacity: 0.5,
+              },
+              move: {
+                enable: true,
+                random: true,
+                speed: { min: 1, max: 3 },
+              },
+              number: {
+                density: {
+                  enable: true,
+                },
+                value: 70,
+              },
+              opacity: {
+                value: { min: 0.3, max: 0.7 },
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 1, max: 1 },
+              },
+            },
+            detectRetina: true,
+          },
+        });
+      })();
+    </script>
+</body>
+</html> 
