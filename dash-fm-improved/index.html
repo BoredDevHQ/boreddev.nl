@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dash.fm-improved - A Last.fm Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <meta property="og:title" content="Introduing: dash.fm-improved">
-    <meta property="og:description" content="A now playing dashboard for last.fm">
-    <meta property="og:image" content="">
-    <meta name="twitter:card" content="summary">
 </head>
 <body>
     <div class="overlay"></div>
@@ -27,7 +23,8 @@
     <main>
         <section class="project-overview">
             <div class="description">
-                <h2>About dash.fm-improved</h2>
+                <h1><span class="gradient-title">dash.fm</span></h1>
+                <div class="subtitle">(AKA dash.fm-improved)</div>
                 <p>A fork of dash.fm with drastically improved UI and additional widgets. This dashboard displays album art and information about currently playing tracks from Last.fm, integrating data from Wikipedia, Musicbrainz, and Deezer APIs.</p>
             </div>
 
@@ -43,11 +40,11 @@
             </div>
 
             <div class="video-section">
-                <h2>Introducing: dash.fm</h2>
+                <h2>Introducing: <span class="gradient-title">dash.fm</span></h2>
                 <div class="video-container">
 
                     <iframe 
-                        src="https://www.youtube.com/embed/piUE9kzSCdo" 
+                        src="https://www.youtube.com/embed/U_x5WpvVOz4" 
                         title="dash.fm-improved Demo"
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -121,72 +118,5 @@ php -S localhost:8000</code>
             <p>View this project on <a href="https://github.com/boreddevhq/dash.fm-improved" target="_blank">GitHub</a></p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js"></script>
-    <script type="text/javascript">
-      (async () => {
-        await tsParticles.load({
-          id: "tsparticles",
-          options: {
-            background: {
-              color: "#000",
-            },
-            fpsLimit: 30,
-            fullScreen: {
-              enable: true,
-              zIndex: -10,
-            },
-            interactivity: {
-              events: {
-                onClick: {
-                  enable: true,
-                  mode: "push",
-                },
-                onHover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-              },
-              modes: {
-                push: {
-                  quantity: 4,
-                },
-                repulse: {
-                  distance: 50,
-                },
-              },
-            },
-            particles: {
-              links: {
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-              },
-              move: {
-                enable: true,
-                random: true,
-                speed: { min: 1, max: 3 },
-              },
-              number: {
-                density: {
-                  enable: true,
-                },
-                value: 70,
-              },
-              opacity: {
-                value: { min: 0.3, max: 0.7 },
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                value: { min: 1, max: 1 },
-              },
-            },
-            detectRetina: true,
-          },
-        });
-      })();
-    </script>
 </body>
 </html> 
