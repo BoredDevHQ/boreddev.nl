@@ -48,7 +48,7 @@
     <section id="home" class="hero">
         <div class="container">
             <h1>Full Stack Developer<br>with a Passion for Front-End</h1>
-            <p>High school student crafting clean code and beautiful interfaces. Specializing in modern web technologies and Swift development.</p>
+            <p>High school student crafting clean code and stunning interfaces.</p>
             <a href="#projects" class="btn">View Projects</a>
         </div>
 
@@ -114,6 +114,20 @@
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
+
+                <a href="dash-fm-improved/index.html" class="project-card clickable">
+                    <div class="project-content">
+                        <h3 class="project-title">dash.fm-improved <span class="view-project">View Project →</span></h3>
+                        <p class="project-description">A beautiful dashboard displaying real-time Last.fm data with album art and artist information.</p>
+                        <div class="project-tech">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>API Integration</span>
+                        </div>
+                    </div>
+                </a>
+
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Custom Kernel</h3>
@@ -136,23 +150,12 @@
                     </div>
                 </div>
                 
-                <a href="dash-fm-improved/index.html" class="project-card clickable">
-                    <div class="project-content">
-                        <h3 class="project-title">dash.fm-improved <span class="view-project">View Project →</span></h3>
-                        <p class="project-description">A beautiful dashboard displaying real-time Last.fm data with album art and artist information.</p>
-                        <div class="project-tech">
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
-                            <span>PHP</span>
-                            <span>API Integration</span>
-                        </div>
-                    </div>
-                </a>
+
                 
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">MacOS Games Collection</h3>
-                        <p class="project-description">Basic MacOS exclusive "Games" to cure buredom.</p>
+                        <p class="project-description">Basic MacOS exclusive games to cure buredom.</p>
                         <div class="project-tech">
                             <span>Swift</span>
                             <span>MacOS</span>
@@ -190,7 +193,7 @@
             
             <div class="contact" id="contact">
                 <h3>Let's Connect</h3>
-                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. <br> <small><i>Keep in mind, i am a minor.</i></small></p>
+                <p>Got a cool project idea or just want to chat? Hit me up and let's see what we can create together. </p>
                 <div class="social-buttons">
                     <a href="https://github.com/boreddevhq" class="btn btn-github" target="_blank">
                         <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -211,13 +214,14 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2025 Chris. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> BoredDevHQ. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Make sure hero section is visible immediately
-        document.querySelector('.hero').classList.add('visible');
+        // Set current year in footer
+        document.getElementById('current-year').textContent = Math.max(new Date().getFullYear(), 2025);
+
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
