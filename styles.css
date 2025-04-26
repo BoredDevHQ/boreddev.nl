@@ -489,3 +489,29 @@ body.no-scroll {
     opacity: 1;
     transform: translateX(5px);
 }
+.github-link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.github-link:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-secondary);
+}
+
+.project-card {
+  position: relative;
+}
+
+.project-card.clickable .github-link {
+  z-index: 2;
+}
