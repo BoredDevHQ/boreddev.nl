@@ -7,8 +7,10 @@
   --accent-hover: #0077ed;
   --discord: #5865F2;
   --discord-hover: #4752c4;
-  --github: #333;
-  --github-hover: #555;
+  --github: #555;
+  --github-hover: #333;
+  --email: #4CAF50;
+  --email-hover: #45a049;
   --card-radius: 12px;
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -150,6 +152,17 @@ nav a:hover {
 
 .btn-discord:hover {
   background-color: var(--discord-hover);
+}
+
+.btn-email {
+  background-color: var(--email);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-email:hover {
+  background-color: var(--email-hover);
 }
 
 .btn-icon {
