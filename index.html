@@ -6,432 +6,157 @@
     <meta property="og:url" content="https://www.boreddev.nl/">
     <meta property="og:type" content="website">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://brew.boreddev.nl">
-    <meta property="og:title" content="Brew Kernel">
-    <meta property="og:description" content="A x86_64 kernel made from scratch, by just one person.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Brew Kernel">
-    <meta name="twitter:description" content="A x86_64 kernel made from scratch, by just one person.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="twitter:title" content="BoredDevHQ">
+    <meta name="twitter:description" content="Full-stack developer with a passion for modern web development and low-level systems programming. I specialize in crafting sleek, responsive web applications while also exploring the depths of system architecture, from custom MacOS apps to operating system kernels. Always pushing boundaries and building innovative digital experiences.">
     <title>BoredDevHQ</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
 </head>
 <body>
-    <div class="overlay"></div>
-    
-    <header>
-        <div class="container header-content">
-            <a href="#home" style="text-decoration: none; color: inherit;">
-                <div class="logo">BoredDevHQ</div>
-              </a>
-            
-            <div class="mobile-menu-button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <div class="floating-sprites" aria-hidden="true">
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+        <div class="planet planet-3"></div>
+        <div class="planet planet-4"></div>
+    </div>
+
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <div class="logo">BoredDevHQ</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div id="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="greeting">Hello there. <span class="wave">👋</span></h1>
+            <p class="intro">I'm a full-stack developer passionate about systems programming, game development, and crafting clean, efficient solutions.</p>
         </div>
     </header>
-    
-    <div class="mobile-nav">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-    
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Full Stack Developer<br>with a Passion for Front-End</h1>
-            <p>High school student crafting clean code and stunning interfaces.</p>
-            <a href="#projects" class="btn">View Projects</a>
-        </div>
 
-    </section>
-      <div class="scroll-arrow" id="scrollArrow">
-    &#x2193;
-  </div>
-</div>
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">SwiftUI</span>
-                    </div>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-grid">
+                    <span class="lang-badge">HTML5</span>
+                    <span class="lang-badge">CSS3</span>
+                    <span class="lang-badge">JavaScript</span>
+                    <span class="lang-badge">SwiftUI</span>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Frameworks</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Svelte</span>
-                        <span class="skill-tag">React</span>
-                    </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <div class="skill-grid">
+                    <span class="lang-badge">Svelte</span>
+                    <span class="lang-badge">React</span>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">PHP</span>
-                    </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <div class="skill-grid">
+                    <span class="lang-badge">JavaScript</span>
+                    <span class="lang-badge">PHP</span>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>General Purpose Languages</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Assembly</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">Java</span>
-                    </div>
+            </div>
+            <div class="skill-category">
+                <h3>General Purpose Languages</h3>
+                <div class="skill-grid">
+                    <span class="lang-badge">Assembly</span>
+                    <span class="lang-badge">Python</span>
+                    <span class="lang-badge">C</span>
+                    <span class="lang-badge">Java</span>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Grafana</span>
-                    </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <div class="skill-grid">
+                    <span class="lang-badge">Git</span>
+                    <span class="lang-badge">Docker</span>
+                    <span class="lang-badge">Figma</span>
+                    <span class="lang-badge">Grafana</span>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
 
-                <a href="https://dash.boreddev.nl" class="project-card clickable">
-                    <div class="project-content">
-                        <h3 class="project-title">dash.fm-improved <span class="view-project">View Project →</span></h3>
-                        <p class="project-description">A beautiful dashboard displaying real-time Last.fm data with album art and artist information.</p>
-                        <div class="project-tech">
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
-                            <span>PHP</span>
-                            <span>API Integration</span>
-                        </div>
-                    </div>
-                </a>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <article class="project-card">
+                <h3>Zero-Day</h3>
+                <p>A pixel-art open-world RPG set in a dystopian City, focused on hacking and resistance. Built using GameMaker and designed around narrative and combat.</p>
+                <div class="project-tech">
+                    <span>GML</span>
+                    <span>GameMaker</span>
+                </div>
+                <a href="https://github.com/boreddevhq/zeroday" class="github-link" target="_blank">View on GitHub</a>
+            </article>
 
-                <a href="https://brew.boreddev.nl" class="project-card clickable">
-                    <div class="project-content">
-                        <h3 class="project-title">Brew Kernel </br> <span class="view-project">View Project →</span></h3>
-                        <p class="project-description">A functional kernel from scratch using C and Assembly, demonstrating low-level system programming skills.</p>
-                        <div class="project-tech">
-                            <span>C</span>
-                            <span>Assembly</span>
-                            <span>Docker</span>
-                            <span>QEMU</span>
-                        </div>
-                    </div>
-                </a>
+            <article class="project-card">
+                <h3>Brew Kernel</h3>
+                <p>A 64-bit operating system kernel written in Assembly and C.</p>
+                <div class="project-tech">
+                    <span>C</span>
+                    <span>Assembly</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/boreddevhq/brewkernel" class="github-link" target="_blank">View on GitHub</a>
+                    <a href="https://brew.boreddev.nl" class="view-project-link" target="_blank">View Project</a>
+                </div>
+            </article>
 
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">ChrisNotes</h3>
-                        <p class="project-description">A MacOS exclusive notes application written in Swift.</p>
-                        <div class="project-tech">
-                            <span>Swift</span>
-                            <span>MacOS</span>
-                            <a href="https://github.com/BoredDevHQ/ChrisNotes" class="github-link" target="_blank">
-                                <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+            <article class="project-card">
+                <h3>dash.fm-improved</h3>
+                <p>A Last.fm-based real-time music dashboard with a clean UI and live updates, utilizing API's.</p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>API</span>
                 </div>
-                
-
-                
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">MacOS Clicker Game</h3>
-                        <p class="project-description">Basic MacOS exclusive clicker game to cure boredom.</p>
-                        <div class="project-tech">
-                            <span>Swift</span>
-                            <span>MacOS</span>
-                            <span>Game Development</span>
-                            <a href="https://github.com/BoredDevHQ/boringclicker" class="github-link" target="_blank">
-                                <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                <div class="project-links">
+                    <a href="https://github.com/boreddevhq/dash.fm-improved" class="github-link" target="_blank">View on GitHub</a>
+                    <a href="https://dash.boreddev.nl" class="view-project-link" target="_blank">View Project</a>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Retro Computer Store</h3>
-                        <p class="project-description">Full-stack e-commerce site for retro computers utilizing a SQL Database.</p>
-                        <div class="project-tech">
-                            <span>PHP</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>SQL</span>
-                            <span>(School Project.)</span>
-                            <a href="https://github.com/BoredDevHQ/schoolinformaticsdatabasephp" class="github-link" target="_blank">
-                                <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Python Discord Bot</h3>
-                        <p class="project-description">Feature-rich Discord bot with moderation tools, memes and utilities.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Discord API</span>
-                            <span>Closed Source</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contact" id="contact">
-                <h3>Let's Connect</h3>
-                <p>Got a cool project idea or just want to chat? Hit me up and let's see what we can create together. </p>
-                <div class="social-buttons">
-                    <a href="https://github.com/boreddevhq" class="btn btn-github" target="_blank">
-                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="https://discord.com/users/738324643324100629" class="btn btn-discord" target="_blank">
-                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3847-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
-                        </svg>
-                        Discord
-                    </a>
-                    <a href="mailto:chris@boreddev.nl" class="btn btn-email">
-                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        Email
-                    </a>
-                </div>
-            </div>
+            </article>
         </div>
     </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> BoredDevHQ. All rights reserved.</p>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-container">
+            <a href="https://discord.com/users/738324643324100629" class="contact-card discord" target="_blank">
+                <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z"/>
+                </svg>
+                <span class="contact-label">Discord</span>
+            </a>
+            <a href="https://github.com/boreddevhq" class="contact-card github" target="_blank">
+                <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                <span class="contact-label">GitHub</span>
+            </a>
+            <a href="mailto:chris@boreddev.nl" class="contact-card email">
+                <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <span class="contact-label">Email</span>
+            </a>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        // Set current year in footer
-        document.getElementById('current-year').textContent = Math.max(new Date().getFullYear(), 2025);
-
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Reveal sections on scroll
-        const sections = document.querySelectorAll('section:not(.hero)');
-        
-        const revealSection = () => {
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const triggerPoint = window.innerHeight * 0.8;
-                
-                if (sectionTop < triggerPoint) {
-                    section.classList.add('visible');
-                }
-            });
-        };
-        
-        // Initial check for sections in view - run immediately
-        window.addEventListener('DOMContentLoaded', () => {
-            revealSection();
-        });
-        
-        // Check for sections when scrolling
-        window.addEventListener('scroll', revealSection);
-        
-        // Navbar background change on scroll
-        const header = document.querySelector('header');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
-            } else {
-                header.style.borderBottom = 'none';
-            }
-        });
-        
-        // Hover effects for project cards
-        const projectCards = document.querySelectorAll('.project-card');
-        
-        projectCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.backgroundColor = '#333';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.backgroundColor = 'var(--card-bg)';
-            });
-        });
-        
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileNav = document.querySelector('.mobile-nav');
-        const overlay = document.querySelector('.overlay');
-        const body = document.body;
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenuButton.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            body.classList.toggle('no-scroll');
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuButton.classList.remove('active');
-                mobileNav.classList.remove('active');
-                overlay.classList.remove('active');
-                body.classList.remove('no-scroll');
-            });
-        });
-        
-        // Close mobile menu when clicking on overlay
-        overlay.addEventListener('click', () => {
-            mobileMenuButton.classList.remove('active');
-            mobileNav.classList.remove('active');
-            overlay.classList.remove('active');
-            body.classList.remove('no-scroll');
-        });
-    </script>
-
-<script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js"></script>
-    <script type="text/javascript">
-      (async () => {
-        await tsParticles.load({
-          id: "tsparticles",
-          options: {
-            background: {
-              color: "#000", // this sets a background color for the canvas
-            },
-            fpsLimit: 30,
-            fullScreen: {
-              enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
-              zIndex: -10, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
-            },
-            interactivity: {
-              events: {
-                onClick: {
-                  enable: true, // enables the click event
-                  mode: "push", // adds the particles on click
-                },
-                onHover: {
-                  enable: true, // enables the hover event
-                  mode: "repulse", // make the particles run away from the cursor
-                },
-              },
-              modes: {
-                push: {
-                  quantity: 4, // number of particles to add on click
-                },
-                repulse: {
-                  distance: 50, // distance of the particles from the cursor
-                },
-              },
-            },
-            particles: {
-              links: {
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-              },
-              move: {
-                enable: true,
-                random: true,
-                speed: { min: 1, max: 3 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
-              },
-
-              number: {
-                density: {
-                  enable: true,
-                },
-                value: 70,
-              },
-              opacity: {
-                value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                value: { min: 1, max: 1 }, // let's randomize the particles size a bit
-              },
-            },
-            detectRetina: true,
-          },
-        });
-      })();
-    </script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const scrollArrow = document.getElementById('scrollArrow');
-      const skillsSection = document.getElementById('skills');
-  
-      scrollArrow.addEventListener('click', function() {
-        skillsSection.scrollIntoView({ behavior: 'smooth' });
-      });
-  
-      window.addEventListener('scroll', function() {
-        const skillsSectionTop = skillsSection.getBoundingClientRect().top;
-        if (skillsSectionTop <= window.innerHeight / 2) {
-          scrollArrow.classList.add('hidden');
-        } else {
-          scrollArrow.classList.remove('hidden');
-        }
-      });
-    });
-  </script>
-    
+    <script src="script.js"></script>
 </body>
-
 </html>
