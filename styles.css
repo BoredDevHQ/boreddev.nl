@@ -336,7 +336,7 @@ body {
     padding: 0 clamp(0.5rem, 2vw, 1rem);
     width: 100%;
 }
-
+/* oh wow you're actually reading this? */
 .contact-card {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
@@ -386,7 +386,6 @@ body {
     border-color: #ea4335;
 }
 
-/* Floating Planets */
 .floating-sprites {
     position: absolute;
     top: 0;
@@ -467,7 +466,6 @@ body {
     100% { right: calc(100% + 32px); transform: rotate(0deg) translateY(0); }
 }
 
-/* Make sure content stays above planets */
 .nav-bar {
     z-index: 100;
 }
@@ -486,7 +484,6 @@ section {
     z-index: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-bar {
         display: none !important;

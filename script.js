@@ -144,15 +144,12 @@ document.addEventListener('DOMContentLoaded', () => {
     hero.addEventListener('mousemove', (e) => {
         const rect = hero.getBoundingClientRect();
         
-        // Calculate mouse position relative to hero center (in percentage from -50 to 50)
         const xPos = ((e.clientX - rect.left) / rect.width - 0.5) * 100;
         const yPos = ((e.clientY - rect.top) / rect.height - 0.5) * 100;
         
-        // Calculate rotation angles based on mouse position
         const xRotation = (yPos / 50) * maxRotation;
         const yRotation = (xPos / 50) * -maxRotation;
         
-        // Apply transform to greeting with more intense effect
         greeting.style.transform = `
             translateX(${xPos * 0.1}px)
             translateY(${yPos * 0.1}px)
@@ -161,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
             translateZ(50px)
         `;
         
-        // Apply transform to intro with less intense effect
         intro.style.transform = `
             translateX(${xPos * 0.05}px)
             translateY(${yPos * 0.05}px)
@@ -171,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     });
 
-    // Reset transforms when mouse leaves the hero section
     hero.addEventListener('mouseleave', () => {
         greeting.style.transform = 'translateZ(0)';
         intro.style.transform = 'translateZ(0)';
