@@ -206,14 +206,16 @@ body {
 }
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .skill-category {
     background-color: var(--bg-secondary);
+    flex-basis: 250px;
     padding: 1.5rem;
     border-radius: 10px;
     border: 1px solid rgba(242, 233, 228, 0.1);
