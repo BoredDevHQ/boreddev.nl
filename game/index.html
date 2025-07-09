@@ -12,7 +12,7 @@
 <body>
     <div id="loading" class="loading-overlay">Loading game...</div>
     <div class="video-container" id="videoContainer" style="display:none;">
-        <video id="mainVideo" src="OPENME.mp4" autoplay loop playsinline tabindex="-1"></video>
+        <video id="mainVideo" src="OPENME.mp4" autoplay loop playsinline tabindex="-1" muted></video>
         <div class="overlay-text">Nice game huh?</div>
     </div>
     <style>
@@ -97,19 +97,26 @@
     const video = document.getElementById('mainVideo');
     video.addEventListener('contextmenu', e => e.preventDefault());
     video.controls = false;
-    video.setAttribute('controls', false);
+    video.removeAttribute('controls');
     video.setAttribute('tabindex', '-1');
+    video.muted = true;
+    video.volume = 1.0;
+    video.play().catch(() => {});
+    const observer = new MutationObserver(() => {
+        if (video.hasAttribute('controls')) video.removeAttribute('controls');
+    });
+    observer.observe(video, { attributes: true });
     function enableAudio() {
         video.muted = false;
         video.volume = 1.0;
-        video.play();
+        video.play().catch(() => {});
         document.body.removeEventListener('mousedown', enableAudio);
         document.body.removeEventListener('keydown', enableAudio);
-        video.removeEventListener('touchstart', enableAudio);
+        document.body.removeEventListener('touchstart', enableAudio);
     }
     document.body.addEventListener('mousedown', enableAudio);
     document.body.addEventListener('keydown', enableAudio);
-    video.addEventListener('touchstart', enableAudio);
+    document.body.addEventListener('touchstart', enableAudio);
     video.addEventListener('canplaythrough', function loaded() {
         document.getElementById('loading').style.opacity = 0;
         setTimeout(() => {
