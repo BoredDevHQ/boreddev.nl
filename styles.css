@@ -36,6 +36,9 @@ body {
     background-color: var(--bg-primary);
 }
 
+h2  {
+    text-align: center;
+}
 .personal-card {
     max-width: 700px;
     margin: 0 auto;
