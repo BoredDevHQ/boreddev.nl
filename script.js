@@ -137,19 +137,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero');
     const greeting = document.querySelector('.greeting');
     const intro = document.querySelector('.intro');
+    const locationRow = document.querySelector('.location-row');
 
     const maxRotation = 10;
     const maxTransform = 15;
 
     hero.addEventListener('mousemove', (e) => {
         const rect = hero.getBoundingClientRect();
-        
         const xPos = ((e.clientX - rect.left) / rect.width - 0.5) * 100;
         const yPos = ((e.clientY - rect.top) / rect.height - 0.5) * 100;
-        
         const xRotation = (yPos / 50) * maxRotation;
         const yRotation = (xPos / 50) * -maxRotation;
-        
+
         greeting.style.transform = `
             translateX(${xPos * 0.1}px)
             translateY(${yPos * 0.1}px)
@@ -157,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             rotateY(${yRotation}deg)
             translateZ(50px)
         `;
-        
+
         intro.style.transform = `
             translateX(${xPos * 0.05}px)
             translateY(${yPos * 0.05}px)
@@ -165,10 +164,23 @@ document.addEventListener('DOMContentLoaded', () => {
             rotateY(${yRotation * 0.5}deg)
             translateZ(25px)
         `;
+
+        if (locationRow) {
+            locationRow.style.transform = `
+                translateX(${xPos * 0.08}px)
+                translateY(${yPos * 0.08}px)
+                rotateX(${xRotation * 0.7}deg)
+                rotateY(${yRotation * 0.7}deg)
+                translateZ(35px)
+            `;
+        }
     });
 
     hero.addEventListener('mouseleave', () => {
         greeting.style.transform = 'translateZ(0)';
         intro.style.transform = 'translateZ(0)';
+        if (locationRow) {
+            locationRow.style.transform = 'translateZ(0)';
+        }
     });
 });
