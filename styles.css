@@ -363,7 +363,6 @@ h2  {
 }
 
 .social-icon {
-    color: var(--text-primary);
     width: 32px;
     height: 32px;
     transition: all 0.2s ease;
@@ -515,7 +514,6 @@ h2  {
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    color: var(--text-primary);
 }
 
 .contact-container {
@@ -525,12 +523,10 @@ h2  {
     margin-top: clamp(1.5rem, 4vw, 2rem);
     padding: 0 clamp(0.5rem, 2vw, 1rem);
     width: 100%;
-    color: var(--text-primary);
 }
 /* oh wow you're actually reading this? */
 .contact-card {
     background-color: var(--bg-secondary);
-    color: var(--text-primary);
     border: 1px solid rgba(242, 233, 228, 0.1);
     padding: clamp(1.5rem, 4vw, 2rem);
     border-radius: 10px;
@@ -555,7 +551,7 @@ h2  {
     width: 32px;
     height: 32px;
     transition: all 0.2s ease;
-    color: var(--text-primary);
+    color: var(--text-secondary);
 }
 
 .contact-label {
