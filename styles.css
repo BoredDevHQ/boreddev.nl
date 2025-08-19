@@ -363,10 +363,14 @@ h2  {
 }
 
 .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 32px;
     height: 32px;
     transition: all 0.2s ease;
     cursor: pointer;
+    color: var(--text-primary);
 }
 
 .social-icon:hover {
@@ -378,6 +382,12 @@ h2  {
     width: 32px;
     height: 32px;
     transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.social-icon object {
+    pointer-events: none;
+    color: currentColor;
 }
 
 /* Skills Section */
