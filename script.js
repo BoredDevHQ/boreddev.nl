@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const greeting = document.querySelector('.greeting');
     const intro = document.querySelector('.intro');
     const locationRow = document.querySelector('.location-row');
+    const socialIcons = document.querySelector('.social-icons');
 
     const maxRotation = 10;
     const maxTransform = 15;
@@ -174,6 +175,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 translateZ(35px)
             `;
         }
+
+        if (socialIcons) {
+            socialIcons.style.transform = `
+                translateX(${xPos * 0.07}px)
+                translateY(${yPos * 0.07}px)
+                rotateX(${xRotation * 0.6}deg)
+                rotateY(${yRotation * 0.6}deg)
+                translateZ(30px)
+            `;
+        }
     });
 
     hero.addEventListener('mouseleave', () => {
@@ -181,6 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
         intro.style.transform = 'translateZ(0)';
         if (locationRow) {
             locationRow.style.transform = 'translateZ(0)';
+        }
+        if (socialIcons) {
+            socialIcons.style.transform = 'translateZ(0)';
         }
     });
 });
